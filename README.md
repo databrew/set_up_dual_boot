@@ -79,5 +79,13 @@
 - Go into your UEFI settings to change the boot order, if desired
 
 ## Deal with some issues
-- There is a bug which needs to be addressed. Ubuntu will not properly restart / shut down unless you explicitly enable 
+- Ubuntu will not properly restart / shut down unless you explicitly enable some additional drivers
+- Search for "Software & Updates"
+- Click on the "Additional Drivers" tab
+- Select the NVidia graphics (instead of Xorg) option
+- Restart the computer (may require a manual button-hold, since this bug is not fixed until after booting again)
+
+## Set up your system 
+- Run `setup.sh` in this directory to install some essential software: `cd ~/Documents/set_up_dual_boot; ./setup.sh`
+
 
