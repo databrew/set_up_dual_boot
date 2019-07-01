@@ -44,11 +44,40 @@
 - Click on the "plus" icon in the bottom left
 ![](https://i0.wp.com/itsfoss.com/wp-content/uploads/2014/05/Installing_Windows8_Ubuntu_2.jpeg)
 
-- You are now in the "Create partition" menu
-- Create a "Root" parition of 20 gb (20,000 MB).
+- You are now in the "Create partition" menu.
+- Create a "Root" parition of 20 gb (20,000 MB). Use the following options
+  - Size: 20000 MB
   - Type of the new partition: Primary
   - Location for the new partition: Beginning of this space
   - Use as: Ext4 journaling file system
-  - Mount point: /
+  - Mount point: `/` 
+  (a single forward-dash means "root")
 -Then click "OK"
+
+- Now create a swap partition by again selecting the large, free space and clicking on the plus arrow
+- - You are now in the "Create partition" menu.
+- Create a "Swap" parition of two times your ram (ie, 32 gb for a 16 gb ram system. Use the following options
+  - Size: 32000 MB
+  - Type of the new partition: Primary
+  - Location for the new partition: Beginning of this space
+  - Use as: swap area
+-Then click "OK"
+
+- Now create a Home partition by again selecting the large, free space and clicking on the plus arrow
+- - You are now in the "Create partition" menu.
+- Create a "Home" parition using the rest of the available free space. Use the following options
+  - Size: Whatever is left (ie, 370000 MB)
+  - Type of the new partition: Primary
+  - Location for the new partition: Beginning of this space
+  - Use as: swap area
+  - Mount point: `/home`
+-Then click "OK"
+- Having created Root, Swap, and Home, you can now click "Install Now"
+
+## Boot your machine
+- Once installed, upon boot, you should be brought to a menu to select which OS to boot
+- Go into your UEFI settings to change the boot order, if desired
+
+## Deal with some issues
+- There is a bug which needs to be addressed. Ubuntu will not properly restart / shut down unless you explicitly enable 
 
