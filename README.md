@@ -27,3 +27,20 @@
 ## Disable secureboot
 
 - Follow this tutorial to disable secure boot: https://itsfoss.com/disable-uefi-secure-boot-in-windows-8/
+
+## Start installing ubuntu as "something else"
+
+- Plug your bootable usb into the machine
+- Start the computer
+- Interrupt regular startup by pressing enter when prompted
+- Install ubuntu as usual, but when you get to the "Installation type" menu, select "Something else" (instead of the usual "Erase disk and install ubuntu")
+- Click Continue
+
+## Create Root, Swap, and Home partitions
+
+- You will be brought to a menu showing the different partitions of the hard drive
+- Identify the large, "free space" partition (this is the one we previously created on Windows)
+- Select the large, "free space" partition
+- Click on the "plus" icon in the bottom left
+![](https://i0.wp.com/itsfoss.com/wp-content/uploads/2014/05/Installing_Windows8_Ubuntu_2.jpeg)
+
