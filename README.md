@@ -44,3 +44,11 @@
 - Click on the "plus" icon in the bottom left
 ![](https://i0.wp.com/itsfoss.com/wp-content/uploads/2014/05/Installing_Windows8_Ubuntu_2.jpeg)
 
+- You are now in the "Create partition" menu
+- Create a "Root" parition of 20 gb (20,000 MB).
+  - Type of the new partition: Primary
+  - Location for the new partition: Beginning of this space
+  - Use as: Ext4 journaling file system
+  - Mount point: /
+-Then click "OK"
+
