@@ -71,8 +71,9 @@
   - Location for the new partition: Beginning of this space
   - Use as: swap area
   - Mount point: `/home`
--Then click "OK"
+- Then click "OK"
 - Having created Root, Swap, and Home, you can now click "Install Now"
+- Go through all the options. Name your system "thinkpad", and your username whatever you want.
 
 ## Boot your machine
 - Once installed, upon boot, you should be brought to a menu to select which OS to boot
@@ -85,7 +86,79 @@
 - Select the NVidia graphics (instead of Xorg) option
 - Restart the computer (may require a manual button-hold, since this bug is not fixed until after booting again)
 
-## Set up your system 
-- Run `setup.sh` in this directory to install some essential software: `cd ~/Documents/set_up_dual_boot; ./setup.sh`
+# Set up your system 
 
+Run the following from the command line to start getting software set up.
 
+```
+# Be sudo
+sudo su
+
+# General update
+apt update
+
+# Install R base
+apt -y install r-base
+
+# Get gdebi
+apt install gdebi-core
+
+# Download RStudio
+Go to https://www.rstudio.com/products/rstudio/download/ and download into Downloads
+gdebi rstudio-xenial-1.1.442-amd64.deb # might be different depending on version)
+
+# Download and install google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
+
+# Install shutter (screenshot tool)
+apt-get install shutter
+
+# Skype
+wget https://go.skype.com/skypeforlinux-64.deb
+apt install .skypeforlinux-64.deb
+
+# Gimp (for photo editing)
+add-apt-repository ppa:otto-kesselgulasch/gimp
+apt-get update
+apt-get install gimp
+
+# Kazam (for recording your screen)
+apt-get install kazam
+
+#Subtitle Composer (for generating subtitles)
+apt-install subtitlecomposer
+
+# Searchmonkey (for advanced file searching)
+apt-get install searchmonkey
+
+# Gnome-tweaks (for changing the look/feel)
+apt-get install gnome-tweak-tool
+
+# pangox libraries (needed for some tools like Cisco anyconnect VPN)
+sudo apt install libpangox-1.0.0
+
+# git
+apt-get install git-core
+
+# python
+apt install software-properties-common
+add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.7
+
+# python accessories
+
+# latex
+apt-get install texlive-full
+
+# postgresql
+
+```
+
+# Configure aesthetics
+
+- To move window buttons (close, minimize, maximize) to the left (rather than the default right): open Gnome Tweaks, click "Windows" on the left menu and then change "Placement" to left.
+
+- To get a dark (rather than the default light) theme: open Gnome Tweaks, click "Appearance" on the left menu and change the "Themes"-"Applications" option to "Adwaita-dark"
+
+- To move icon bar to the right (rather than the default left), go to "Settings", click on "Dock" on the left and change "Position on screen" to right. In the same menu, you can set the icon size to be smaller.
