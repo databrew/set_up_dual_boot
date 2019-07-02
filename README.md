@@ -107,7 +107,7 @@ apt-get install shutter
 
 # Skype
 wget https://go.skype.com/skypeforlinux-64.deb
-apt install .skypeforlinux-64.deb
+apt install ./skypeforlinux-64.deb
 
 # Gimp (for photo editing)
 add-apt-repository ppa:otto-kesselgulasch/gimp
@@ -118,7 +118,7 @@ apt-get install gimp
 apt-get install kazam
 
 #Subtitle Composer (for generating subtitles)
-apt-install subtitlecomposer
+apt install subtitlecomposer
 
 # Searchmonkey (for advanced file searching)
 apt-get install searchmonkey
@@ -126,16 +126,8 @@ apt-get install searchmonkey
 # Gnome-tweaks (for changing the look/feel)
 apt-get install gnome-tweak-tool
 
-# pangox libraries (needed for some tools like Cisco anyconnect VPN)
-sudo apt install libpangox-1.0.0
-
 # git
 apt-get install git-core
-
-# python
-apt install software-properties-common
-add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.7
 
 # python accessories
 apt-get install python3-pip
@@ -163,9 +155,16 @@ apt-get install libgdal-dev
 
 # postgresql
 
-# cisco anyconnect (joe only)
+# cisco anyconnect # For UF VPN - Joe only
+# pangox libraries (needed for some tools like Cisco anyconnect VPN)
+sudo apt install libpangox-1.0.0
+# Follow instructions here
 
 ```
+
+# R packages
+
+Run `Rscript rpackages.R`
 
 # Configure aesthetics and further tweaks
 
