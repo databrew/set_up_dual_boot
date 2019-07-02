@@ -45,8 +45,8 @@
 ![](https://i0.wp.com/itsfoss.com/wp-content/uploads/2014/05/Installing_Windows8_Ubuntu_2.jpeg)
 
 - You are now in the "Create partition" menu.
-- Create a "Root" parition of 20 gb (20,000 MB). Use the following options
-  - Size: 20000 MB
+- Create a "Root" parition of whatever the total free disk space is minus 2x your ram. For example, with an available disk space of 430,000 mb (43gb) and ram of 16gb, we do 430,000 - (2 x 16,000) = 398,000
+  - Size: 398000 MB
   - Type of the new partition: Primary
   - Location for the new partition: Beginning of this space
   - Use as: Ext4 journaling file system
@@ -54,7 +54,7 @@
   (a single forward-dash means "root")
 -Then click "OK"
 
-- Now create a swap partition by again selecting the large, free space and clicking on the plus arrow
+- Now create a swap partition by selecting the remaining free space (which is now approximately twice your ram) and clicking on the plus arrow
 - - You are now in the "Create partition" menu.
 - Create a "Swap" parition of two times your ram (ie, 32 gb for a 16 gb ram system. Use the following options
   - Size: 32000 MB
@@ -63,17 +63,9 @@
   - Use as: swap area
 -Then click "OK"
 
-- Now create a Home partition by again selecting the large, free space and clicking on the plus arrow
-- - You are now in the "Create partition" menu.
-- Create a "Home" parition using the rest of the available free space. Use the following options
-  - Size: Whatever is left (ie, 370000 MB)
-  - Type of the new partition: Primary
-  - Location for the new partition: Beginning of this space
-  - Use as: swap area
-  - Mount point: `/home`
-- Then click "OK"
-- Having created Root, Swap, and Home, you can now click "Install Now"
-- Go through all the options. Name your system "thinkpad", and your username whatever you want.
+(Some people create a much smaller root partition of only 10-20gb and a separate home partition. No need to do this for our purposes, so we're done)
+
+- Click "Install Now"
 
 ## Boot your machine
 - Once installed, upon boot, you should be brought to a menu to select which OS to boot
@@ -180,6 +172,8 @@ apt-get install libgdal-dev
 
 - Enable "US International" keyboard by going to "Region and Language"
 - Make ctrl+k the language keyboard switcher by going to keyboard and replacing the shortcuts under "typing" for "Switch to next input source" and "Switch to previous input source"
+
+- Make sure to format numbers correctly to your region (search for "region" in dash). This is applicable if, for example, you picked Europe as your location but you want numbers formatted in American style
 
 - To move window buttons (close, minimize, maximize) to the left (rather than the default right): open Gnome Tweaks, click "Windows" on the left menu and then change "Placement" to left.
 
