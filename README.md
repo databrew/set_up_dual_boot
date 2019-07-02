@@ -151,6 +151,9 @@ apt-get update
 apt-get install gdal-bin
 apt-get install libgdal-dev
 
+# Terminator
+apt install terminator
+
 # java
 
 # postgresql
