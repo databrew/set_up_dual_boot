@@ -147,15 +147,39 @@ add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.7
 
 # python accessories
+apt-get install python3-pip
+apt-get install python-pip
+pip install virtualenv
+pip3 install virtualenv
+pip install virtualenvwrapper
+pip3 install virtualenvwrapper
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper.sh
 
 # latex
-apt-get install texlive-full
+apt-get install texlive-full # very large, could take a while
+
+# kdenlive (video editing)
+### Install from software center
+
+# gdal (geographic stuff)
+add-apt-repository ppa:ubuntugis/ppa
+apt-get update
+apt-get install gdal-bin
+apt-get install libgdal-dev
+
+# java
 
 # postgresql
 
+# cisco anyconnect (joe only)
+
 ```
 
-# Configure aesthetics
+# Configure aesthetics and further tweaks
+
+- Enable "US International" keyboard by going to "Region and Language"
+- Make ctrl+k the language keyboard switcher by going to keyboard and replacing the shortcuts under "typing" for "Switch to next input source" and "Switch to previous input source"
 
 - To move window buttons (close, minimize, maximize) to the left (rather than the default right): open Gnome Tweaks, click "Windows" on the left menu and then change "Placement" to left.
 
