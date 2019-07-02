@@ -71,11 +71,15 @@
 - Go into your UEFI settings to change the boot order, if desired
 
 ## Deal with some issues
-- Ubuntu will not properly restart / shut down unless you explicitly enable some additional drivers
-- Search for "Software & Updates"
-- Click on the "Additional Drivers" tab
-- Select the NVidia graphics (instead of Xorg) driver option
-- Restart the computer (may require a manual button-hold, since this bug is not fixed until after booting again)
+- Ubuntu may not properly restart / shut down due to a driver bug. To fix this, do the following (without connection to any external monitor)
+- Run `sudo gedit /etc/default/grub` and replace the "quiet splash" parameter in the `GRUB_CMDLINE_LINUX_DEFAULT` argument with "quiet splash nomodeset"
+- Then run `sudo update-grub`
+- Then run `sudo apt update && sudo apt upgrade -y`
+- Restart the computer by running `sudo shutdown`
+- Go to "Software & Updates"; select the US server.
+- Select "Canonical partners" in "Other Software" tab
+- Go to "Ubuntu Software Center" and run any updates (if applicable)
+
 
 # Set up your system 
 
