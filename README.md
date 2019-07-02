@@ -74,7 +74,7 @@
 - Ubuntu will not properly restart / shut down unless you explicitly enable some additional drivers
 - Search for "Software & Updates"
 - Click on the "Additional Drivers" tab
-- Select the NVidia graphics (instead of Xorg) option
+- Select the NVidia graphics (instead of Xorg) driver option
 - Restart the computer (may require a manual button-hold, since this bug is not fixed until after booting again)
 
 # Set up your system 
