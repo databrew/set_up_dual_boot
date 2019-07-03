@@ -84,7 +84,18 @@
 sudo apt install nouveau-firmware
 ```
 - Now again run `sudo gedit /etc/default/grub` and replace the "quiet splash nomodeset" parameter in the `GRUB_CMDLINE_LINUX_DEFAULT` argument with "quiet splash". "nomodeset" was just a temporary fix.
+- Now run the below
 
+```
+sudo apt-get update && sudo apt-get install laptop-mode-tools
+```
+- Now again run `sudo gedit /etc/default/grub` then change the `GRuB_CMDLINE_LINUX_DEFAULT` line to:
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=1 nouveau.modeset=0"
+```
+- Then run `sudo update-grub`
+- Now reboot the computer forcefully: `sudo reboot -f`
+- Now both backlight and shutdown should be working properly.
 
 
 # Set up your system 
