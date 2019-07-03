@@ -79,6 +79,12 @@
 - Go to "Software & Updates"; select the US server.
 - Select "Canonical partners" in "Other Software" tab
 - Go to "Ubuntu Software Center" and run any updates (if applicable)
+- Screen brightness has a bug. You'll need to run the below to update the kernal
+```
+sudo apt install nouveau-firmware
+```
+- Now again run `sudo gedit /etc/default/grub` and replace the "quiet splash nomodeset" parameter in the `GRUB_CMDLINE_LINUX_DEFAULT` argument with "quiet splash". "nomodeset" was just a temporary fix.
+
 
 
 # Set up your system 
