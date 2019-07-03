@@ -61,3 +61,13 @@ pkgs <- c('tidyverse',
           'maptools',
           'rgeos',
           '')
+pkgs <- sort(pkgs)
+for(i in 1:length(pkgs)){
+  this_pkg <- pkgs[i]
+  if(!require(this_pkg)){
+    message('Installing ', this_pkg)
+    install.packages(this_pkg)
+  } else {
+    message(paste0(this_pkg, ' is already installed'))
+  }
+}

@@ -175,6 +175,9 @@ apt-get install libgdal-dev
 # Terminator
 apt install terminator
 
+# Atom (text editor)
+Go to https://atom.io and download/install.
+
 # java
 
 # postgresql
