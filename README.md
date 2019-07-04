@@ -33,7 +33,8 @@
 - Select configure and turn protection off. 
 - You will again have to restart your computer. 
 - Once restarted you can shrink the C Drive as much as you want.
-- Finally, go back turn "no paging file off". Additionally, it's recommended to also turn back on "System Protection".
+- Go back turn "no paging file off" and turn back on "System Protection". 
+- Finally open Command Prompt again and type "powercfg/h on". 
 
 ## Disable fast startup
 
