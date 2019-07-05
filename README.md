@@ -178,6 +178,9 @@ apt install terminator
 # Atom (text editor)
 Go to https://atom.io and download/install.
 
+Mis libraries
+apt install libssl-dev
+
 # java
 
 # postgresql

@@ -64,7 +64,7 @@ pkgs <- c('tidyverse',
 pkgs <- sort(pkgs)
 for(i in 1:length(pkgs)){
   this_pkg <- pkgs[i]
-  if(!require(this_pkg)){
+  if(!require(get(this_pkg))){
     message('Installing ', this_pkg)
     install.packages(this_pkg)
   } else {
