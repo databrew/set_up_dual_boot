@@ -18,6 +18,24 @@
 - Right click on the largest drive (most likely `C:`) and select "shrink volume"
 - By shrinking the volume, you will be creating some free space on the disk. The amount of free space should be however large you want your ubuntu system to have access to (ie, 100gb for Windows, 400gb for Ubuntu on a 500gb system)
 
+## Unable to shink past certain amount.
+
+- Open Open Command Prompt (right click and select "Run as Administrator".
+- Type "powercfg/h off". Then close Command Prompt.
+- In control panel, select Advanced System Settings. 
+- Select the "Advanced" tab and click on "Settings" in the "Performance" box.
+- Select the "Advanced" tab amd click on "Change..." under the "Virtual memory" box.
+- Uncheck "Automatically manage paging file size for all drives". 
+- Then select "No paging file".
+- Select "Ok" and then "Apply".
+- You will be prompted by the computer to restart. 
+- After restart, go back to "Advanced system settings" and select the "System Protection" tab.
+- Select configure and turn protection off. 
+- You will again have to restart your computer. 
+- Once restarted you can shrink the C Drive as much as you want.
+- Go back turn "no paging file off" and turn back on "System Protection". 
+- Finally open Command Prompt again and type "powercfg/h on". 
+
 ## Disable fast startup
 
 - Go to Control Panel > Hardware and Sound > Power Options > System Settings > Choose what the power buttons do.
