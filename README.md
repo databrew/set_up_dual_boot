@@ -49,7 +49,7 @@
   - Type of the new partition: Primary
   - Location for the new partition: Beginning of this space
   - Use as: Ext4 journaling file system
-  - Mount point: `/` 
+  - Mount point: `/`
   (a single forward-dash means "root")
 -Then click "OK"
 
@@ -98,7 +98,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=1 nouveau.modeset=0"
 - Now both backlight and shutdown should be working properly.
 
 
-# Set up your system 
+# Set up your system
 
 Run the following from the command line to start getting software set up.
 
@@ -124,6 +124,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
 
 # Install shutter (screenshot tool)
+(First you need to install some old perl dependencies. Follow these instructions: https://itsfoss.com/shutter-edit-button-disabled/)
 apt-get install shutter
 
 # Skype
@@ -178,8 +179,16 @@ apt install terminator
 # Atom (text editor)
 Go to https://atom.io and download/install.
 
-Misc libraries
+# Codecs
+sudo apt update && sudo apt install ubuntu-restricted-extras
+sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
+
+
+# Misc libraries
 apt install libssl-dev
+
+# Pandoc
+apt install pandoc
 
 # java
 
