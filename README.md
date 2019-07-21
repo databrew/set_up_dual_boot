@@ -183,12 +183,18 @@ Go to https://atom.io and download/install.
 sudo apt update && sudo apt install ubuntu-restricted-extras
 sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
 
+# Cargo
+(Required for gganimate)
+sudo apt-get install cargo
 
 # Misc libraries
 apt install libssl-dev
 
 # Pandoc
 apt install pandoc
+
+# Virtualbox
+(Get from software center)
 
 # java
 
