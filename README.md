@@ -161,6 +161,16 @@ pip3 install virtualenvwrapper
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
+Copy and paste the following into .bashrc
+# load virtualenvwrapper for python (after custom PATHs)
+venvwrap="virtualenvwrapper.sh"
+/usr/bin/which -a $venvwrap
+if [ $? -eq 0 ]; then
+    venvwrap=`/usr/bin/which $venvwrap`
+    source $venvwrap
+fi
+
+
 # latex
 apt-get install texlive-full # very large, could take a while
 
@@ -197,8 +207,34 @@ apt install pandoc
 (Get from software center)
 
 # java
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt-get update
+sudo apt-get install oracle-java12-installer
+sudo apt-get install oracle-java12-set-default
+java -version # just to check
+
+# create java environment variables
+(Run the following to create a new file: sudo nano /etc/profile.d/jdk12.sh)
+(Paste the following)
+export J2SDKDIR=/usr/lib/jvm/java-12
+export J2REDIR=/usr/lib/jvm/java-12
+export PATH=$PATH:/usr/lib/jvm/java-12/bin:/usr/lib/jvm/java-12/db/bin
+export JAVA_HOME=/usr/lib/jvm/java-12
+export DERBY_HOME=/usr/lib/jvm/java-12/db
+(Run the below)
+source /etc/profile.d/jdk12.sh
+
 
 # postgresql
+
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+sudo -i -u postgres
+createuser --interactive
+- name of role: joebrew
+- superuser: y
+createdb joebrew
+
 
 # cisco anyconnect # For UF VPN - Joe only
 # pangox libraries (needed for some tools like Cisco anyconnect VPN)
